@@ -1,0 +1,1 @@
+export {ProfcomCategoriesPage} from "./ProfcomCategoriesPage.tsx"

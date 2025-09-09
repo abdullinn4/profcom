@@ -1,0 +1,54 @@
+###
+GET http://localhost:8080/profcom/document
+
+
+
+###
+POST http://localhost:5173/profcom/aid-request/university/1
+Content-Type: application/json
+
+{
+  "surname": "Иванов",
+  "name": "Иван",
+  "patronymic": "Иванович",
+  "birth_date": "2002-05-15",
+  "course": 3,
+  "group": "ИКБО-03-22",
+  "address": "г. Казань, ул. Ленина, 10",
+  "registration_address": "г. Казань, ул. Ленина, 10",
+  "passport_series": 4510,
+  "passport_number": 123456,
+  "issue_date": "2020-07-01",
+  "issued_by": "ОВД Казани",
+  "inn": "123456789012",
+  "snils": "12345678901",
+  "contact_number": "+79991234567",
+  "full_state_support": true,
+  "disability_status": "Нет",
+  "disabilityType": "",
+  "study_type": "очная"
+}
+
+###
+POST http://localhost:5173/profcom/aid-request/university/1
+Content-Type: application/json
+
+{
+  "id": "1",
+  "surname": "Гайфуллин",
+  "name": "азамат",
+  "patronymic": "ильдарович",
+  "birth_date": "2002-02-11",
+  "course": "3",
+  "group": "11",
+  "registration_address": "вавав",
+  "passport_series": "1111",
+  "passport_number": "212121",
+  "issue_date": "2000-02-11",
+  "issued_by": "ввава",
+  "inn": "123456789012",
+  "snils": "12345678901",
+  "contact_number": "79991234567",
+  "full_state_support": true,
+  "disability_status": "1"
+}

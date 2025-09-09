@@ -1,0 +1,193 @@
+@use "../../styles/colors" as colors
+@use "../../styles/mixins" as mixins
+
+.header_wrapper
+  height: 60px
+  min-width: 100vh
+  display: flex
+  align-items: center
+  box-shadow: 0 0 25px 0 colors.$c-grey-color
+
+  a
+    text-decoration: none
+    color: colors.$c-dark-grey-color
+
+  li
+    list-style-type: none
+
+  @include mixins.device(mobile)
+    flex-wrap: wrap
+    justify-content: space-between
+    min-width: 100%
+
+  @include mixins.device(tablet)
+    justify-content: space-between
+    padding: 0 15px
+
+.header_logo
+  display: flex
+  align-items: center
+
+.header_logo p
+  font-size: 18px
+  background: linear-gradient(90deg, colors.$c-light-blue-color, colors.$c-blue-color)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  margin-left: 10px
+
+  @include mixins.device(mobile)
+    p
+      font-size: 14px
+
+  @include mixins.device(tablet)
+    p
+      font-size: 16px
+
+
+.header_icon
+  width: 100px
+  height: 40px
+  align-items: center
+
+.header_nav
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 20px
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease
+
+  ul
+    display: flex
+    gap: 20px
+
+  @include mixins.device(mobile)
+    position: absolute
+    top: 60px
+    left: 0
+    width: 100%
+    flex-direction: column
+    background-color: colors.$c-white-color
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+    border-radius: 0 0 10px 10px
+    padding: 20px
+    transform: translateY(-100%)
+    opacity: 0
+    visibility: hidden
+
+    &.active
+      transform: translateY(0)
+      opacity: 1
+      visibility: visible
+
+  @include mixins.device(desktop)
+    position: static
+    flex-direction: row
+    transform: none
+    opacity: 1
+    visibility: visible
+
+
+.header_nav_li
+  align-items: center
+
+  @include mixins.device(mobile)
+    display: flex
+    flex-direction: column
+
+
+.hamburger
+  display: none
+  flex-direction: column
+  justify-content: space-between
+  width: 25px
+  height: 20px
+  cursor: pointer
+  background: none
+  border: none
+  margin-right: 20px
+
+  span
+    display: block
+    width: 100%
+    height: 2px
+    background: colors.$c-dark-grey-color
+    transition: all 0.3s ease
+
+  &.open span:nth-child(1)
+    transform: rotate(45deg) translate(5px, 5px)
+
+  &.open span:nth-child(2)
+    opacity: 0
+
+  &.open span:nth-child(3)
+    transform: rotate(-45deg) translate(5px, -5px)
+
+  @include mixins.device(mobile)
+    display: flex
+
+.hamburger span
+  box-sizing: border-box
+
+
+.header_login
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin-left: auto
+  margin-right: 20px
+  gap: 20px
+
+  @include mixins.device(mobile)
+    display: none
+
+.menu_modal
+  background-color: colors.$c-white-color
+  width: 250px
+  padding: 15px
+  display: flex
+  flex-direction: column
+  gap: 10px
+  border: 1px solid colors.$c-grey-color
+  position: absolute
+  top: 70px
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+  z-index: 1000
+  border-radius: 10px
+  transform: translateY(-10px)
+  transition: opacity 0.3s ease, transform 0.3s ease
+
+  @include mixins.device(mobile)
+    right: 50px
+
+.header_dropdown
+  display: flex
+  align-items: center
+  color: colors.$c-dark-grey-color
+  cursor: pointer
+  gap: 5px
+
+  .icon
+    font-size: 16px
+    transform: rotate(0deg)
+    transition: transform 0.3s ease
+
+  .icon_active
+    font-size: 16px
+    transform: rotate(180deg)
+    transition: transform 0.3s ease
+
+  &:hover
+    color: colors.$c-black-color
+
+a:hover
+  color: colors.$c-black-color
+
+.header_dropdown:hover
+  color: colors.$c-black-color
+
+.mobile_only
+  display: none
+
+  @include mixins.device(mobile)
+    display: block
+

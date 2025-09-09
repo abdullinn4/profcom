@@ -1,0 +1,19 @@
+version: '3.1'
+
+volumes:
+  pg_profcom:
+
+services:
+  profcom_db:
+    restart: always
+    image: postgres:latest
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_DB: profcom_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./pg_profcom:/var/lib/postgresql/data/pgdata
+

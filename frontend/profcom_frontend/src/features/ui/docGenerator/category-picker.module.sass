@@ -1,0 +1,58 @@
+@use "../../../styles/colors" as colors
+@use "../../../styles/mixins" as mixins
+
+.categoryPicker
+  h2
+    color: colors.$c-black-color
+    font-weight: 600
+    margin-bottom: 0.75rem
+    font-size: 1.3rem
+  select
+    padding: 0.5rem
+    border-radius: 6px
+    border: 1.5px solid  colors.$c-grey-color
+    font-size: 1rem
+    color:  colors.$c-black-color
+    width: 100%
+    max-width: 400px
+    margin-bottom: 1rem
+    &focus
+      outline: none
+      border-color:  colors.$c-light-blue-color
+      box-shadow: 0 0 5px rgba( colors.$c-light-blue-color, 0.5)
+
+  table
+    width: 100%
+    border-collapse: collapse
+    margin-top: 1rem
+    th, td
+      padding: 0.5rem 1rem
+      border-bottom: 1px solid  colors.$c-grey-color
+      color:  colors.$c-black-color
+      text-align: left
+      font-size: 0.95rem
+  ul
+    margin: 0
+    padding: 0
+    color:  colors.$c-black-color
+    font-size: 0.9rem
+
+    li
+      list-style-type: none
+  th
+    color: colors.$c-black-color
+    font-weight: 700
+    border-bottom: 2px solid  colors.$c-light-blue-color
+
+.delete_button
+  background-color:  colors.$c-red-color
+  color:  colors.$c-white-color
+  border: none
+  border-radius: 6px
+  padding: 0.75rem 1.5rem
+  cursor: pointer
+  font-weight: 700
+  font-size: 1.1rem
+  transition: background-color 0.3s ease
+  &:hover
+    background-color: #ec2626

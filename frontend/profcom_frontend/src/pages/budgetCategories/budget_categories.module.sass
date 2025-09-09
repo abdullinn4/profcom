@@ -1,0 +1,68 @@
+.container
+  margin: 0 auto
+  padding: 2rem
+  max-width: 1200px
+  width: 100%
+  box-sizing: border-box
+
+.header
+  margin-bottom: 2rem
+  text-align: center
+
+.title
+  font-size: 2rem
+  color: #2c3e50
+  margin-bottom: 0.5rem
+
+.subtitle
+  font-size: 1.5rem
+  color: #7f8c8d
+  font-weight: normal
+
+.tableWrapper
+  border-radius: 8px
+  overflow: hidden
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  width: 100%
+  overflow-x: auto
+
+.categoriesTable
+  width: 100%
+  border-collapse: collapse
+  background: white
+  table-layout: fixed
+
+  th, td
+    padding: 1rem
+    text-align: left
+    border-bottom: 1px solid #ecf0f1
+    word-wrap: break-word
+
+  th
+    background-color: #3498db
+    color: white
+    font-weight: 600
+    position: sticky
+    top: 0
+
+  .tableRow:hover
+    background-color: #f8f9fa
+
+  .categoryColumn
+    width: 40%
+    vertical-align: top
+
+  .documentsColumn
+    width: 60%
+
+@media (max-width: 768px)
+  .container
+    padding: 1rem
+
+  .categoriesTable
+    display: table
+    width: 100%
+
+    th, td
+      min-width: 0
+      white-space: normal

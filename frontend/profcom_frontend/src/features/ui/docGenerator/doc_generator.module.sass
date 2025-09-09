@@ -1,0 +1,57 @@
+@use "../../../styles/colors" as colors
+@use "../../../styles/mixins" as mixins
+
+.docGenerator
+  max-width: 900px
+  margin: 1.5rem auto
+  padding: 1.5rem 2.5rem
+  background-color:  colors.$c-white-color
+  border-radius: 10px
+  box-shadow: 0 0 15px rgba( colors.$c-blue-color, 0.15)
+  color:  colors.$c-black-color
+  h1
+    font-size: 1.9rem
+    font-weight: 700
+    margin-bottom: 1rem
+    border-bottom: 3px solid  colors.$c-black-color
+    padding-bottom: 0.25rem
+  h2
+    font-size: 1.4rem
+    margin-top: 1.5rem
+    margin-bottom: 0.8rem
+    font-weight: 600
+  ul
+    list-style-type: disc
+    color:  colors.$c-black-color
+    font-size: 1rem
+    margin: 0
+    padding: 0
+
+    li
+      list-style-type: none
+
+  .buttonGroup
+    margin-top: 2rem
+    display: flex
+    gap: 1rem
+
+    @include mixins.device(mobile)
+      flex-direction: column
+
+.submit_button
+    background-color:  colors.$c-light-blue-color
+    color:  colors.$c-white-color
+    border: none
+    border-radius: 6px
+    padding: 0.75rem 1.5rem
+    cursor: pointer
+    font-size: 16px
+    transition: background-color 0.3s ease
+    &:hover
+      background-color: darken( colors.$c-light-blue-color, 12%)
+
+.li_all_docs
+  padding: 10px
+  border: 1px solid colors.$c-dark-grey-color
+  border-radius: 7px
+  margin: 7px

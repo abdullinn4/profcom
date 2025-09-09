@@ -1,0 +1,146 @@
+@use "../../../styles/colors" as colors
+@use "../../../styles/mixins" as mixins
+
+.profile
+  padding: 2rem
+
+  h1
+    font-size: 2rem
+    margin-bottom: 1.5rem
+    color: colors.$c-black-color
+
+    @include mixins.device(mobile)
+      font-size: 1.6rem
+      text-align: center
+
+.loading
+  padding: 2rem
+  font-size: 1.2rem
+  color: colors.$c-grey-color
+
+.profileBlock
+  display: flex
+  gap: 2rem
+  align-items: flex-start
+  margin-bottom: 2rem
+
+  @include mixins.device(mobile)
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  .avatar
+    width: 120px
+    height: 120px
+    object-fit: cover
+    border-radius: 50%
+    border: 2px solid colors.$c-grey-color
+
+  div
+    p
+      margin: 0.3rem 0
+
+    strong
+      display: inline-block
+      min-width: 140px
+      color: colors.$c-dark-grey-color
+
+.additionalInfo
+  margin-top: 2rem
+
+  h2
+    font-size: 1.4rem
+    margin-bottom: 1rem
+    color: colors.$c-black-color
+
+    @include mixins.device(mobile)
+      text-align: center
+      font-size: 1.2rem
+
+  .infoGrid
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    @include mixins.device(mobile)
+      grid-template-columns: 1fr
+
+    div
+      background-color: colors.$c-white-color
+      padding: 1rem
+      border-radius: 8px
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05)
+
+      span
+        font-weight: bold
+        color: colors.$c-grey-color
+        display: block
+        margin-bottom: 0.4rem
+
+.editButton
+  margin: 30px auto
+  color: colors.$c-white-color
+  border-radius: 7px
+  background-color: colors.$c-light-blue-color
+  border: colors.$c-light-blue-color
+  padding: 10px 20px
+  font-size: 16px
+  cursor: pointer
+  transition: 0.3s
+
+  &:hover
+    color: colors.$c-white-color
+    background-color: colors.$c-blue-color
+
+  @include mixins.device(mobile)
+    width: 100%
+    padding: 1rem
+    font-size: 1rem
+
+.infoTable
+  width: 40%
+  border-collapse: collapse
+  border-spacing: 0
+  border: 1px solid colors.$c-grey-color
+  border-radius: 12px
+  overflow: hidden
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04)
+  background-color: colors.$c-white-color
+
+  tbody
+    tr
+      transition: background-color 0.2s ease
+
+      &:nth-child(even)
+        background-color: #f9f9f9
+
+      &:hover
+        background-color: #f1f4ff
+
+      td
+        padding: 1rem 1.4rem
+        font-size: 0.95rem
+        color: colors.$c-black-color
+        vertical-align: top
+        border: 1px solid #e0e0e0
+
+        &:first-child
+          font-weight: 500
+          color: colors.$c-grey-color
+          width: 40%
+          white-space: nowrap
+
+        &:last-child
+          color: colors.$c-dark-grey-color
+
+    tr:last-child td
+      border-bottom: none
+
+  @include mixins.device(mobile)
+    tbody
+      tr
+        td
+          padding: 0.7rem 1rem
+          font-size: 0.9rem
+
+

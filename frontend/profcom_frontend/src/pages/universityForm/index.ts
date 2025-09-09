@@ -1,0 +1,1 @@
+export {UniversityFormPage} from "./UniversityFormPage.tsx"

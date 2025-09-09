@@ -1,0 +1,34 @@
+@use "../../../styles/colors" as colors
+@use "../../../styles/mixins" as mixins
+
+.attachedDocuments
+  margin-top: 1rem
+  h2
+    color: colors.$c-black-color
+    margin-bottom: 0.8rem
+    font-weight: 600
+    font-size: 1.4rem
+
+
+.li_all_docs
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px
+  border: 1px solid colors.$c-dark-grey-color
+  border-radius: 7px
+  margin: 7px
+
+.delete_button
+  background-color: colors.$c-red-color
+  color: colors.$c-white-color
+  border: none
+  border-radius: 6px
+  padding: 0.3rem 0.8rem
+  cursor: pointer
+  font-weight: 600
+  font-size: 0.9rem
+  transition: background-color 0.3s ease
+  &:hover
+    background-color: #ec2626
+

@@ -1,0 +1,11 @@
+.idea/
+pg_profcom
+.env
+.vscode/
+target/
+frontend/profcom_frontend/node_modules
+frontend/profcom_frontend/.idea
+frontend/profcom_frontend/dist
+frontend/profcom_frontend/.env.development
+frontend/profcom_frontend/.env.production
+frontend/profcom_frontend/src/Env.ts

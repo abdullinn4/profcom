@@ -1,0 +1,1 @@
+export {DocGeneratorPage} from "./DocGeneratorPage.tsx"
